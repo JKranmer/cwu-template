@@ -2,12 +2,12 @@
   <footer class="footer">
     <div class="footer__body">
       <div class="container">
-        <div class="flex">
-          <div style="width: 33.33%">
+        <div class="grid grid-cols-3 gap-4">
+          <div>
             <img src="https://picsum.photos/id/14/300/150" alt="" />
           </div>
-          <div style="width: 33.33%; text-align: center">
-            <ul class="footer__body--social-media" style="margin: auto">
+          <div>
+            <ul class="footer__body--social-media">
               <li>
                 <a href="#" target="_blank"
                   ><i class="fa-brands fa-square-facebook"></i>
@@ -42,7 +42,7 @@
               </li>
             </ul>
           </div>
-          <div style="width: 33.33%; text-align: end">
+          <div>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate
             dolorum culpa sunt vero blanditiis, aliquid excepturi explicabo
             voluptas ipsam quas, et eius. Repellat saepe suscipit veritatis

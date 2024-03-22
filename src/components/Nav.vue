@@ -1,17 +1,18 @@
 <template>
-  <nav>
-    <div class="container">
+  <nav class="">
+    <v-container>
       <ul>
         <li v-for="link in links" :key="link.name">
           <router-link :to="link.path">{{ link.name }}</router-link>
         </li>
       </ul>
-    </div>
+    </v-container>
   </nav>
 </template>
 
 <script setup lang="ts">
 import { RouterLink } from "vue-router";
+import VContainer from "@/components/atom/Container.vue";
 
 const links = [
   {
