@@ -1,9 +1,5 @@
 <template>
-  <!-- Carosel -->
-  <v-carossel
-    :carossel-data="carosselData"
-    :options="{ opacity: 0.5, posicion: 'center' }"
-  />
+  <!-- Banner -->
   <div>
     <section class="py-8 bg-sand-pure text-slate-800">
       <v-container>
@@ -79,28 +75,10 @@
 
 <script setup lang="ts">
 // import { onMounted } from "vue";
-import VCarossel from "@/components/Carossel.vue";
 import VParalax from "@/components/Paralax.vue";
 import VNewsLetter from "@/components/NewsLetter.vue";
 import VContainer from "@/components/atom/Container.vue";
 import VCard from "@/components/atom/Card.vue";
-
-const carosselData = [
-  {
-    title: "Titulo 10",
-    img: "url(https://picsum.photos/id/684/1920/800)",
-    description:
-      "lorem ipsum dolor sit amet consectetur adipisicing elit. Alias enim vero totam pariatur, consequuntur nam impedit dolor eius non magnam dignissimos eaque! Amet dignissimos repellat soluta alias, dicta blanditiis voluptatum!",
-  },
-  {
-    title: "Titulo 20",
-    img: "url(https://picsum.photos/id/685/1920/800)",
-  },
-  {
-    title: "Titulo 30",
-    img: "url(https://picsum.photos/id/686/1920/800)",
-  },
-];
 </script>
 
 <style scoped lang="scss"></style>
