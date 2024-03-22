@@ -1,6 +1,6 @@
 <template>
   <div class="h-[56px]"></div>
-  <nav class="fixed top-0 w-full z-50 shadow-lg bg-primary-pure">
+  <nav class="fixed top-0 w-full z-50 shadow-lg bg-blue-medium">
     <v-container>
       <ul class="list-none pl-0 my-4 flex gap-x-8 gap-y-4">
         <li v-for="link in links" :key="link.name">

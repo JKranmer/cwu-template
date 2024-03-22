@@ -8,6 +8,7 @@ export default {
       colors: {
         "primary-pure": "#00747a",
         "primary-medium": "#004649",
+        "blue-medium": "#5c9b9b",
         "primary-dark": "#002f31",
         "sand-pure": "#ebe5cf",
         "salmon-pure": "#dda67f",
