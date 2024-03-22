@@ -11,24 +11,24 @@ body {
   padding: 0 1rem;
 }
 
-.flex {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  &--center {
-    @extend .flex;
-    justify-content: center;
-  }
-  &--end {
-    @extend .flex;
-    justify-content: end;
-  }
-  &--start {
-    @extend .flex;
-    justify-content: start;
-  }
-  &--rap {
-    @extend .flex;
-    flex-wrap: wrap;
-  }
-}
+// .flex {
+//   display: flex;
+//   justify-content: space-between;
+//   gap: 1rem;
+//   &--center {
+//     @extend .flex;
+//     justify-content: center;
+//   }
+//   &--end {
+//     @extend .flex;
+//     justify-content: end;
+//   }
+//   &--start {
+//     @extend .flex;
+//     justify-content: start;
+//   }
+//   &--rap {
+//     @extend .flex;
+//     flex-wrap: wrap;
+//   }
+// }
