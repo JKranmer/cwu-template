@@ -11,6 +11,7 @@ export default {
         "primary-dark": "#002f31",
         "sand-pure": "#ebe5cf",
         "salmon-pure": "#dda67f",
+        "rose-pure": "#e1c7b6",
       },
     },
   },
