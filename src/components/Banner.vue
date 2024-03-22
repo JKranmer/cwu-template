@@ -1,6 +1,6 @@
 <template>
   <div
-    class="min-w-[100vw] h-[300px] bg-no-repeat bg-center bg-cover animate__animated animate__fadeIn text-slate-50"
+    class="h-[300px] bg-no-repeat bg-center bg-cover animate__animated animate__fadeIn text-slate-50"
     :style="{ backgroundImage: path }"
   >
     <div
