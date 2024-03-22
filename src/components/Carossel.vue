@@ -1,20 +1,19 @@
 <template>
-  <div class="carossel">
+  <div class="flex overflow-hidden">
     <div
-      class="carossel--item animate__animated animate__fadeIn"
+      class="min-w-[100vw] h-[500px] bg-no-repeat bg-center bg-cover animate__animated animate__fadeIn text-slate-300"
       v-for="(img, index) in props.carosselData"
       :style="{ backgroundImage: img.img }"
       :id="`carossel--item-${index}`"
       v-show="index === 0"
     >
       <div
-        class="bg-dark"
+        class="h-full w-full flex flex-col items-center justify-center"
         :style="{
           background: darkProp,
         }"
       >
-        <div
-          class="container"
+        <v-container
           :style="{ textAlign: props.options.posicion as TPosition }"
         >
           <h1 class="">{{ img.title }}</h1>
@@ -23,7 +22,7 @@
           </p>
           <button @click="prev" :data-item="index">Prev</button>
           <button @click="next" :data-item="index">Next</button>
-        </div>
+        </v-container>
       </div>
     </div>
   </div>
@@ -31,6 +30,7 @@
 
 <script setup lang="ts">
 import { onMounted } from "vue";
+import VContainer from "@/components/atom/Container.vue";
 
 type TPosition = "center" | "left" | "right";
 
@@ -90,7 +90,7 @@ const next = (e: any) => {
 
 const changeCarossel = (el: HTMLSelectElement) => {
   if (!el) return;
-  const elementos = document.querySelectorAll(".carossel--item") as any;
+  const elementos = document.querySelectorAll(".animate__animated") as any;
   for (const el of elementos) {
     el.style.display = "none";
   }
@@ -100,26 +100,4 @@ const changeCarossel = (el: HTMLSelectElement) => {
 onMounted(() => {});
 </script>
 
-<style scoped lang="scss">
-.carossel {
-  display: flex;
-  overflow: hidden;
-  &--item {
-    // background-image: url("https://picsum.photos/id/684/1920/800");
-    min-width: 100vw;
-    height: 500px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    .bg-dark {
-      height: 100%;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    color: white;
-  }
-}
-</style>
+<style scoped lang="scss"></style>

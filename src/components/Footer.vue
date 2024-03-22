@@ -1,43 +1,33 @@
 <template>
-  <footer class="footer">
-    <div class="footer__body">
-      <div class="container">
+  <footer class="text-slate-50">
+    <div class="pt-16 pb-8 bg-primary-medium">
+      <v-container>
         <div class="grid grid-cols-3 gap-4">
           <div>
             <img src="https://picsum.photos/id/14/300/150" alt="" />
           </div>
           <div>
-            <ul class="footer__body--social-media">
+            <h3 class="text-lg uppercase mb-4 font-bold">Redes sociais</h3>
+            <ul class="list-none">
               <li>
-                <a href="#" target="_blank"
-                  ><i class="fa-brands fa-square-facebook"></i>
-                  ComeWithUs_facebook
+                <a
+                  href="#"
+                  target="_blank"
+                  class="no-underline transition-opacity hover:opacity-50"
+                  title="ComeWithUs_instagram"
+                >
+                  <!-- <i>Icon insta</i> -->
+                  ComeWithUs_instagram
                 </a>
               </li>
               <li>
-                <a href="#" target="_blank"
-                  ><i class="fa-brands fa-instagram"></i> ComeWithUs_instagram
-                </a>
-              </li>
-              <li>
-                <a href="#" target="_blank"
-                  ><i class="fa-brands fa-square-pinterest"></i>
-                  ComeWithUs_pinterest
-                </a>
-              </li>
-              <li>
-                <a href="#" target="_blank"
-                  ><i class="fa-brands fa-youtube"></i> ComeWithUs_youtube
-                </a>
-              </li>
-              <li>
-                <a href="#" target="_blank"
-                  ><i class="fa-brands fa-discord"></i> ComeWithUs_discord
-                </a>
-              </li>
-              <li>
-                <a href="#" target="_blank"
-                  ><i class="fa-brands fa-telegram"></i> ComeWithUs_telegram
+                <a
+                  href="#"
+                  target="_blank"
+                  class="no-underline transition-opacity hover:opacity-50"
+                >
+                  <!-- <i>Icon email</i>  -->
+                  contato@cwu.com
                 </a>
               </li>
             </ul>
@@ -49,67 +39,35 @@
             perferendis atque eveniet? Provident?
           </div>
         </div>
-      </div>
+      </v-container>
     </div>
-    <div class="footer__end">
-      <div class="container">
+    <div class="footer__end text-sm p-2 text-center bg-primary-dark">
+      <v-container>
         ©
-        <router-link to="/"> ComeWithUs </router-link>
+        <router-link
+          to="/"
+          class="no-underline font-bold transition-colors text-slate-300 hover:text-slate-50"
+        >
+          ComeWithUs
+        </router-link>
         - {{ dateAge }}.
-        <span class="prog">Desenvolvido por</span>
+        <span class="text-slate-300">Desenvolvido por</span>
         <a
           href="https://www.linkedin.com/in/jonathas-kranmer-silva/"
           target="_blank"
+          class="no-underline font-bold transition-colors text-slate-300 hover:text-slate-50"
         >
           @JonathasKranmerSilva
         </a>
-      </div>
+      </v-container>
     </div>
   </footer>
 </template>
 
 <script setup lang="ts">
 import { RouterLink } from "vue-router";
+import VContainer from "./atom/Container.vue";
 const dateAge = new Date().getFullYear();
 </script>
 
-<style scoped lang="scss">
-.footer {
-  color: $neutral-color-hight-medium;
-  &__body {
-    padding: 4rem 0 2rem 0;
-    background-color: $brand-color-primary-medium;
-    .container {
-      display: flex;
-    }
-    &--social-media {
-      list-style: none;
-      padding: 0 1rem;
-      width: max-content;
-      a {
-        text-decoration: none;
-        color: $neutral-color-hight-medium;
-      }
-    }
-  }
-  &__end {
-    font-size: 1rem;
-    padding: 0.5rem;
-    text-align: center;
-    background-color: $brand-color-primary-dark;
-    a {
-      text-decoration: none;
-      font-weight: bold;
-      transition: ease-in-out 0.2s color;
-      color: $neutral-color-low-light;
-
-      &:hover {
-        color: $neutral-color-hight-light;
-      }
-    }
-    .prog {
-      color: $neutral-color-low-light;
-    }
-  }
-}
-</style>
+<style scoped lang="scss"></style>
