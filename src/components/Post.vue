@@ -1,9 +1,13 @@
 <template>
   <div class="rounded-lg p-4 border-2 gap-8 mb-4 w-full shadow-lg">
-    <figure class="zoom_post rounded-lg cursor-pointer">
-      <v-img :path="data.path" :alt="data.title" />
-    </figure>
-    <img src="" alt="" />
+    <router-link
+      :to="`/blog/${data.id}`"
+      class="no-underline transition-opacity hover:opacity-50 text-slate-300"
+    >
+      <figure class="zoom_post rounded-lg cursor-pointer">
+        <v-img :path="data.path" :alt="data.title" />
+      </figure>
+    </router-link>
     <h3 class="font-bold my-4">{{ data.title }}</h3>
     <div class="flex justify-between">
       <div>
@@ -16,6 +20,8 @@
 
 <script setup lang="ts">
 import VImg from "@/components/atom/Img.vue";
+import { RouterLink } from "vue-router";
+
 interface IPost {
   path: string;
   title: string;

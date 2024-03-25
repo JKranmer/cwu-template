@@ -3,6 +3,7 @@ import Home from "../views/HomeView.vue";
 import About from "@/views/AboutView.vue";
 import Contact from "@/views/ContactView.vue";
 import Blog from "@/views/BlogView.vue";
+import BlogDetails from "@/views/BlogDetailsView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -43,6 +44,12 @@ const router = createRouter({
           meta: {
             title: "Blog",
           },
+        },
+        {
+          path: "/blog/:id/",
+          name: "BlogDetailView",
+          props: (route) => ({ query: route.query }),
+          component: BlogDetails,
         },
       ],
     },
